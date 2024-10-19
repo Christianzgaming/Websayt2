@@ -17,3 +17,18 @@ document.addEventListener('keydown', function(event) {
         event.preventDefault();
     }
 });
+
+
+// Prevent F12 and Ctrl+Shift+I
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
+                event.preventDefault();
+                alert("DevTools is disabled!");
+            }
+        });
+
+        // Disable right-click context menu
+        document.addEventListener("contextmenu", function(event) {
+            event.preventDefault();
+            document.getElementById("overlay").style.display = "block";
+        });

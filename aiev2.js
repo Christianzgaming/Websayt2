@@ -1,6 +1,6 @@
  // Function to detect if DevTools is open
         function detectDevTools() {
-            const devtools = devtools/./;                          
+            const devtools = /./;                          
             devtools.toString = function() {
                 // Alert only when DevTools is genuinely opened
                 alert("DevTools is open!");
