@@ -194,32 +194,7 @@
          <script src="channels.js"></script>
          <!-- Include the anti-inspect-element script -->
          <script src="anti-inspect-element.js"></script>
-         <script>
-        // Detect if DevTools is open
-        const devtools = /./;
-        devtools.toString = function() {
-            alert("DevTools is open!");
-            window.location.href = "about:blank"; // Redirect to a blank page
-        };
-
-        setInterval(function() {
-            console.log(devtools);
-        }, 1000);
-
-        // Prevent F12 and Ctrl+Shift+I
-        document.addEventListener("keydown", function(event) {
-            if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
-                event.preventDefault();
-                alert("DevTools is disabled!");
-            }
-        });
-
-        // Disable right-click context menu
-        document.addEventListener("contextmenu", function(event) {
-            event.preventDefault();
-            document.getElementById("overlay").style.display = "block";
-        });
-    </script>
+         <script src="aiev2.js"></script>
          <link href="all.min.css" rel="stylesheet">
       </head>
       <body class="bg-black text-white min-h-screen flex flex-col">
